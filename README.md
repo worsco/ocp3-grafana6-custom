@@ -1,16 +1,16 @@
 # ocp3-grafana6-custom
 
-## Create a new project
+## Switch to the openshift-monitoring project
 ```
-oc new-project build-grafana6
+oc project openshift-monitoring
 ```
 
 ## Create secret that will be used to pull images (needed for rhel7-minimum)
 ```
 oc create secret docker-registry your-secret-name \
     --docker-server=registry.redhat.io \
-    --docker-username='ANUMBER|your-sa-name' \
-    --docker-password='REPLACEME'
+    --docker-username='A_NUMBER|your-container-service-account-name' \
+    --docker-password='YOUR_LONG_HASH_PASSWORD'
 ```
 
 ## link secret for pulling
