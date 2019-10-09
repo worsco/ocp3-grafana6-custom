@@ -30,6 +30,15 @@ oc new-build --name=grafana6-custom \
 https://github.com/worsco/ocp3-grafana6-custom.git
 ```
 
+### Alternatively from local directory of cloned repo
+
+```
+oc new-build --name=grafana6-custom \
+--strategy=docker \
+--from-repo="."
+```
+
+
 ## Start the build
 ```
 oc start-build grafana6-custom
