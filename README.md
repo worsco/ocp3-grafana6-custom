@@ -31,8 +31,10 @@ https://github.com/worsco/ocp3-grafana6-custom.git
 ```
 
 ### Alternatively from local directory of cloned repo
-
 ```
+git clone https://github.com/worsco/ocp3-grafana6-custom.git ocp3-grafana6-custom
+cd ocp3-grafana6-custom
+
 oc new-build --name=grafana6-custom \
 --strategy=docker \
 --from-repo="."
