@@ -37,7 +37,7 @@ cd ocp3-grafana6-custom
 
 oc new-build --name=grafana6-custom \
 --strategy=docker \
---from-repo="."
+--from-directory="."
 ```
 
 
