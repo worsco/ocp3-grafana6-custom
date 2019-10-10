@@ -66,7 +66,7 @@ RUN echo "" && \
 RUN rpm --import /tmp/gpg.key && \
     rpm -ivh /tmp/grafana-6.3.3-1.x86_64.rpm 
 
-RUN curl -s -L https://github.com/Vonage/Grafana_Status_panel/archive/master.zip -o /tmp/master.zip && \
+RUN curl -s -k -L https://github.com/Vonage/Grafana_Status_panel/archive/master.zip -o /tmp/master.zip && \
     unzip -o /tmp/master.zip -d /var/lib/grafana/plugins/ && \
     rm -f /tmp/master.zip
 
